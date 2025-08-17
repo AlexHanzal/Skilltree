@@ -1,0 +1,16 @@
+{
+  "name": "skilltree",
+  "version": "1.0.0",
+  "description": "skilltree app",
+  "license": "ISC",
+  "author": "Alex Hanzal",
+  "type": "commonjs",
+  "main": "../js/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "test"
+  },
+  "dependencies": {
+    "electron": "^37.2.6"
+  }
+}

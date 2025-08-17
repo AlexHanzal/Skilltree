@@ -1,0 +1,176 @@
+:root{
+    --primary-color: #ffffff; 
+    --hover-color: #e2e2e2; 
+    --normal-border:2px solid black; 
+    --normal-border-radius: 10px;
+    --normal-font-family: Arial, sans-serif;
+    --normal-font-size: 12px; 
+    --brown-primary-color: #865a26;
+    --light-brown-primary-color: #fce0c0;
+    --locked-achievement-color: #ff2626;
+    --unlocked-achievement-color: #48fd48; /* Example color for unlocked achievements */
+    --primary-color-darker: #e4e4e4;
+  
+}
+*{
+    border: var();
+}
+.locked{
+    background-color: var(--locked-achievement-color);
+}
+.unlocked{
+    background-color: var(--unlocked-achievement-color);
+
+}
+.hidden {
+    display: none !important;
+}
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    }
+
+
+.navbar {
+
+    height: 50px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar button{
+    margin: 15px;
+    margin-left: px;
+    width: 140px;
+    height: 35px;
+    background-color: var(--primary-color);
+    border: var(--normal-border);
+    border-radius: var(--normal-border-radius);
+    cursor: pointer;
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+    text-align: center;
+    /* Removed display: flex and align-items: left */
+}
+.achievement-button {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: var(--normal-border);
+    border-radius: 999px;
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    
+    top: 20px;
+    position: relative;
+}
+
+.achievement-description {
+
+    background-color: #1f2741;
+    border-radius: calc(var(--normal-border-radius) * 3);
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 7px 1px #1f2741;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.achievement-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.achievement-text {
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.achievement-button-unlock{
+    background-color: var(--unlocked-achievement-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--normal-border-radius);
+    cursor: pointer;
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+}
+.achievement-button-lock{
+    background-color: var(--locked-achievement-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--normal-border-radius);
+    cursor: pointer;
+    font-family: var(--normal-font-family);
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+}
+.stage-1{
+    background-color: var(--primary-color-darker);
+    border-radius: var(--normal-border-radius);
+    font-size: 24px;
+    font-weight: bold;
+    color: black; 
+    width: 200px;
+    height: 800px;   
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.Symbol{
+ color: rgb(255, 61, 61);
+ font-weight: bold;
+}
+.unit{
+ color: rgb(73, 173, 255);
+ font-weight: bold;
+}
+.formulas{
+ color: rgb(69, 255, 115);
+ font-weight: bold;
+}
+.achievement-description-big {
+
+    background-color: #1f2741;
+    border-radius: calc(var(--normal-border-radius) * 3);
+    width: 600px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 7px 1px #1f2741;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
