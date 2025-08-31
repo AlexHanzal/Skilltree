@@ -13,7 +13,7 @@ const createWindow = () => {
     }
   })
 
-  win.loadFile('../hmtl/index.html')
+  win.loadFile(path.join(__dirname, '../hltm/index.html'))
 }
 
 app.whenReady().then(() => {
@@ -33,7 +33,11 @@ app.on('window-all-closed', () => {
 })
 
 ipcMain.on('achievement-unlocked', (event, data) => {
-  const dataFile = path.join(__dirname, '../data/data');
+  const dataDir = path.join(__dirname, '../data');
+  const dataFile = path.join(dataDir, 'data');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
   let unlocked = [];
   try {
     if (fs.existsSync(dataFile)) {
@@ -49,7 +53,11 @@ ipcMain.on('achievement-unlocked', (event, data) => {
 });
 
 ipcMain.on('achievement-locked', (event, data) => {
-  const dataFile = path.join(__dirname, '../data/data');
+  const dataDir = path.join(__dirname, '../data');
+  const dataFile = path.join(dataDir, 'data');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
   let unlocked = [];
   try {
     if (fs.existsSync(dataFile)) {
@@ -67,7 +75,11 @@ ipcMain.on('achievement-locked', (event, data) => {
 });
 
 ipcMain.handle('get-unlocked-achievements', async () => {
-  const dataFile = path.join(__dirname, '../data/data');
+  const dataDir = path.join(__dirname, '../data');
+  const dataFile = path.join(dataDir, 'data');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
   let unlocked = [];
   try {
     if (fs.existsSync(dataFile)) {
